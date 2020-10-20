@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+  font-family: verdana, arial, helvetica, serif;
+  color:#333;
+}
+
+
+body {
+background: #fefefe;
+font-size: 0.9em;
+margin:0; }
+
+/*.container {
+margin-left: 1%;
+ }*/
+
+
+
+[class*="col-"] {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+}
+
+
+.row {
+padding: 0% 5% 0% 5%;
+ }
+ 
+ 
+
+.headline {
+margin-bottom:0;padding-bottom:0;
+margin-top:20px;
+height:auto;
+ }
+ 
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 500px) {  /*(min-width: 768px)*/
+    /* For desktop, laptop, tablet: */
+    /*    .col-1 {    }    */
+}
+
+@media only screen and (min-width: 500px) {  /*(min-width: 768px)*/
+    /* For desktop, laptop, tablet: */
+    .col-5 {width: 41.66%;}
+    .col-7 {width: 58.33%;}
+    .col-12 {width: 100%;}
+}
+
+
+
+
+ 
+.row-img {
+  height: 150px;
+  overflow: hidden;
+  width:100%;
+  margin: auto;
+
+}
+ 
+.row-img img {
+  width: 100%;
+}
+
+
+
+
+.content {
+overflow: hidden;
+margin: 0em auto 0 auto;
+padding-top:8em;
+max-width: 800px;
+background: rgb(250,240,240);
+ }
+
+.header {
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height: auto;
+box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+ }
+ 
+
+/* offsetting an html anchor to adjust for fixed header css*/ 
+:target:before {
+content:"";
+display:block;
+height:120px; /* fixed header height*/
+margin:-120px 0 0; /* negative fixed header height */
+}
+ 
+.topheadline {
+font-size: 24pt;
+color: rgb(255,200,200);
+background: rgb(150,0,0);
+text-align:center;
+width: 100%;
+padding: 10px 0px 10px 0px;
+ } 
+
+
+/* Menu */
+
+.menu {
+display:inline-block;
+width:100%;
+text-align:center;
+background: rgb(120,0,0);
+}
+
+ 
+  
+/*Style for menu links*/
+.menu ul {
+   	list-style-type:none;
+    margin:0px 0px 0px 0px;
+    padding: 15px 0px 15px 0px;
+    background: rgb(120,0,0);
+}
+
+
+.menu ul li {
+   	display:inline;
+    width:100%;
+}
+
+.menu ul li a {
+
+	text-align: left;
+    font-weight: bold;
+    color: white;
+    color: rgb(255,200,200);
+	padding: 10px 5% 10px 5%;
+    border-top: 0px;
+    margin: 0;
+	text-decoration: none;
+}
+
+
+ 
+.menu:hover ul {
+    display: block;
+}
+
+.menu:focus ul {
+    display: none;
+}
+
+
+
+/* End Menu */
+
+
+
+
+a {
+text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+background-color: transparent;
+color: rgb(100,100,200);
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+h1, h2, h3 {
+  color: rgb(150,0,0);
+  font-family: helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: 0px;
+
+}
+
+img.icon-black {
+display:inline; }
+
+img.icon-white {
+display:none; }
+
+.download-icon, .forward-icon {
+margin-left: 7px; }
+
+.download-icon:before {
+content: url("img/icons/download-black.svg");
+}
+
+.forward-icon:before {
+content: url("img/icons/forward-black.svg");
+}
+
+
+a.button {
+    margin: 0px 25px 0px 0px;
+    display:inline-block;
+
+ }
+
+.bottom {
+margin-top: 20px;
+font-size:xx-small;
+}
+ 
+ 
+.xx-small {font-size: xx-small; }
+
+
+
+ol.papers li .title {
+font-weight:bold;
+ }
+ol.papers li .journal {
+font-style:italic;
+ }
+
+ol.papers {
+    padding-left:20pt;
+ }
+
+ol.papers li {
+margin-bottom: 20px;
+ }
+
+
+img.portrait {
+max-width:100%;
+}
+
+ 
+img.menu-icon {
+display:none;
+ }
+
+img.icon, img.download-pdf {
+height:12pt;
+margin-left:0px; }
+
+
+
+
+
+
+ 
+ 
+/*Responsive Styles*/
+
+
+@media screen and (min-width : 800px){
+.topheadline::before {
+content:"S\00f8ren Knudby - ";
+} 
+
+.topheadline#frontpage::before {
+content:"";
+} 
+
+
+}
+
+
+
+
+
+@media screen and (max-width : 1600px){
+.menu ul li a {
+padding: 10px 4% 10px 4%;
+}}
+
+@media screen and (max-width : 1200px){
+.menu ul li a {
+padding: 10px 2% 10px 2%;
+}}
+
+
+@media screen and (max-width : 800px){
+	/*Make dropdown links appear */
+    
+
+/* offsetting an html anchor to adjust for fixed header css*/ 
+:target:before {
+content:"";
+display:block;
+height:65px; /* fixed header height*/
+margin:-65px 0 0; /* making up for fixed header height */
+}
+
+.header {
+box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5); }
+    
+.content {
+padding-top: 4em;
+ }
+
+    
+.menu {
+      width: auto;
+      float:left;
+    padding: 10px;
+ }
+.menu ul {
+	display: none;
+    position:absolute;
+    margin:10px 0px 0px -15px;
+    padding: 0px 0px 0px 0px;
+}
+
+.menu ul li a {
+   	display:block;
+    border-top: 1px solid rgb(255,200,200);
+    border-right: 0px;
+	padding: 15px 15px 15px 15px;
+}
+
+
+ .menu ul li a:hover {
+     background: rgb(150,0,0);
+ }
+     
+img.menu-icon {
+display:block;
+ }
+
+
+.topheadline {
+
+font-size: 2em;
+color: rgb(255,240,240);
+background: rgb(150,0,0);
+text-align:center;
+width: 100%;
+padding: 9px 0px 8px 0px;
+ } 
+
+
+.headline {
+margin-top:25px;padding:15px;width:100%;
+background: rgb(150,0,0);
+height:auto;
+ }
+
+.headline h2{
+padding:0;margin:0;
+color: rgb(255,200,200);
+text-align:center;
+width: 100%;
+
+ }
+
+/* buttons */
+
+a.button {
+    background-color: rgb(150,0,0);
+    border: none;
+    color: rgb(255,240,240);
+    padding: 15px 10px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    border-radius: 8px;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    width: 160px;
+ }
+
+a.button:hover {
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+ }
+
+img.icon-black {
+display:none; }
+
+img.icon-white {
+display:inline; }
+
+
+.download-icon:before {
+content: url("img/icons/download-white.svg");
+}
+    
+.forward-icon:before {
+content: url("img/icons/forward-white.svg");
+}
+  
+}
